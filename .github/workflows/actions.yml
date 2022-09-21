@@ -12,4 +12,4 @@ jobs:
         with:
           who-to-greet: Emmanuel Oyebamiji
       - name: Log Greeting Time
-        run: ehco "${{ steps.greet.outputs.time}}"
+        run: echo "${{ steps.greet.outputs.time}}"
