@@ -1,0 +1,12 @@
+name: Emmanuel
+age: 25
+address: "Ubeji: Warri"
+active: true
+key: 
+    key: value
+    key2: 33
+    key3:
+array:
+    - item1
+    - item 2
+    - {key: value}
