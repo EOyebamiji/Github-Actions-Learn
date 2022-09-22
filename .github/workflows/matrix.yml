@@ -4,14 +4,22 @@ on: push
 
 jobs:
   node-version:
-    runs-on: ubuntu-latest
+  # Strategy allows to run codes repeatedly with different parameters
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node-version: [6, 8, 10]
+      # max-parallel: 2
+  # if fail-fast is true - All jobs will only run if the above is successful
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Log node version
         run: |
           node -v
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: ${{ matrix.node-version }}
       - name: Log node version
         run: |
           node -v
