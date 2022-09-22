@@ -1,11 +1,11 @@
 name: Actions Workflow
 
-on:
-  push:
-    branches:
-      - master
-      - 'feature/*' #mathes the defined syntax
-      - 'feature/**'
+on: [pull_request] 
+  # push:
+  #  branches:
+  #    - master
+  #    - 'feature/*' #mathes the defined syntax
+  #    - 'feature/**'
   # schedule:
   #  - cron: "*/2 * * * *"
   #  - cron: "*/3 * * * *"
