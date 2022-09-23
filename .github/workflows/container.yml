@@ -27,4 +27,5 @@ jobs:
           cat /etc/os-release
           pwd
           whoami
-          
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time}}"
