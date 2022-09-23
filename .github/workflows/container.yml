@@ -23,7 +23,7 @@ jobs:
       - name: Run a custom executable script
         uses: docker://node:16-alpine
         with:
-          entrypoint: ./script.sh
+          entrypoint: ./script.sh #make script executable Chmod +x script.sh
           args: "Successful script"
 
       - name: Log New Node Version
