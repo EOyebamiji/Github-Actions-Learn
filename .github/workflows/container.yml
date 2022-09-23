@@ -31,6 +31,14 @@ jobs:
         with:
           entrypoint: /usr/local/bin/node
           args: -v
+      
+      #This step is useful in real life projects where you'd love to get slack notifications for every push
+      - name: Send Slack Message
+        uses: docker://technosophos/slack-notify
+        env:
+        # Ensure Slack Webhook is encrypted using secrets
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_MESSAGE: "Hello Team, Welcome to DevOps"
 
 
   node-docker:
