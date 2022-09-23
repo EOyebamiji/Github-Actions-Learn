@@ -15,7 +15,7 @@ jobs:
       - name: Step with docker
         uses: docker://node:16-alpine
         with:
-          entrypoint: usr/bin/echo
+          entrypoint: "/usr/bin/echo"
           args: 'Hello World, Welcome to my docker integration with GitHub Actions'
 
       - name: Log New Node Version
